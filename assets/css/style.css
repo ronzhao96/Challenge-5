@@ -5,31 +5,26 @@ body {
 }
 
 .container {
-  display: block;
-  margin-left: 0;
-  margin-right: 0;
+  margin: auto;
   padding: 0;
 }
 
 .container row {
   display: flex;
-  align-items: left;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
   justify-content: center;
-  width: 100%;
-
 }
 
 .container h2 {
   width: 25%;
-  height: 100px;
+  height: 150px;
   border-style: solid;
   border-color: black;
 }
 
-input {
+textarea {
   width: 75%;
-  height: 100px;
+  height: 150px;
   border-style: solid;
   border-color: black;
   background: transparent;
@@ -37,17 +32,21 @@ input {
   resize: none;
   color: #000000;
   padding: 10px;
-  border-right: 1px solid #000000;
+  border: 2px solid #000000;
 }
 
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: teal;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
   margin: 0;
+}
+
+#currentDay {
+  font-size: 30px;
 }
 
 .description{
@@ -93,7 +92,7 @@ row {
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  height: 100px;
+  height: 150px;
 }
 
 .saveBtn:hover {
@@ -101,4 +100,3 @@ row {
   transition: all .3s ease-in-out;
 }
 
-@media (min)
