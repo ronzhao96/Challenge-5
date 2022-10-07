@@ -3,9 +3,11 @@
 
 ## Objective 
 Refactor the starter code so that the website includes:
-* A working date display at the top of the page
-* Time blocks for standard business hours 
-* Generates random password given user selected criteria
+* A working date display at the top of the page.
+* Time blocks for standard business hours.
+* Color-coded time blocks to represent past, present, and future events
+* Input line for each time block
+* Working save button that stores inputted text in local storage so that text still persits after page refresh.
 <br>
 
 ## Technologies Used
@@ -15,29 +17,36 @@ Refactor the starter code so that the website includes:
 <br>
 
 ## Knowledge Leared
-* Learned how to use while loops 
+* Learned how to use JSON and localStorage to store inputs
 ```
- while (otherCriteria != "Y" && otherCriteria != "N") {
-    otherCriteria = prompt("Do you wish to include lowercase, uppercase, numeric, and/or special characters? (Y for Yes and N for No)");
-  }
-```
-* Leared how to generate random numbers 
-```
-for (var i = 0; i < length - 1; i++) {
-      randomNumber = Math.floor(Math.random() * chars.length);
-      passwordText += randomNumber;
+ function saveLastEvent5() {    
+    var userEvent5 = {savedEvent5: savedEvent[5].value};
+    localStorage.setItem("userEvent5", JSON.stringify(userEvent5));  
+}
+
+function renderLastEvent5() {
+    var lastEvent5 = JSON.parse(localStorage.getItem("userEvent5"));
+    if (lastEvent5 !== null) {
+        savedEvent[5].innerHTML = lastEvent5.savedEvent5;
+    }
+    else {
+        return;
     }
 ```
-* Learned how to select characters from a string randomly using substring and random numbers
+* Leared how to display date with moment.js 
 ```
-randomNumber1 = Math.floor(Math.random() * letters.length);
-    passwordText += letters.substring(randomNumber1, randomNumber1 + 1);
+$("#currentDay").text(today);
+```
+* Learned how to use init to display saved data after page refresh
+```
+function init() {
+    renderLastEvent0 ();
 ```
 <br>
 
-## Bugs
-
-
+## Issues
+* Script.js is very lengthy because I couldn't figure out how to loop and iterate functions. Below is a code snapshot of attempted loop and iteration:
+```
 for (i=0; i<=8; i++)  {
     saveButton[i].addEventListener("click", function(event) {
         event.preventDefault();
@@ -68,3 +77,10 @@ for (i=0; i<=8; i++)  {
 
     init();
 }
+```
+<br>
+
+## Screenshot
+![link](./assets/)
+
+## Link
