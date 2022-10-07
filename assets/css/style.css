@@ -4,14 +4,42 @@ body {
   line-height: 1;
 }
 
-textarea{
+.container {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+.container row {
+  display: flex;
+  align-items: left;
+  margin-bottom: 20px;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.container h2 {
+  width: 25%;
+  height: 100px;
+  border-style: solid;
+  border-color: black;
+}
+
+input {
+  width: 75%;
+  height: 100px;
+  border-style: solid;
+  border-color: black;
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
   padding: 10px;
+  border-right: 1px solid #000000;
 }
+
 
 .jumbotron {
   text-align: center;
@@ -19,6 +47,7 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  margin: 0;
 }
 
 .description{
@@ -30,10 +59,11 @@ textarea{
   border-radius: 15px;
 }
 
-.row {
+row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
+  width: 100%;
 }
 
 .hour {
@@ -63,9 +93,12 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  height: 100px;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+@media (min)
