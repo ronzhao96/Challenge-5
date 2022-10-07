@@ -81,6 +81,7 @@ for (i=0; i<=8; i++)  {
 <br>
 
 ## Screenshot
-![link](./assets/)
+![link](./assets/Screenshot.png)
 
 ## Link
+https://ronzhao96.github.io/Challenge-5/
